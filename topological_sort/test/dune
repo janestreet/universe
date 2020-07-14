@@ -1,0 +1,4 @@
+(library (name topological_sort_test)
+ (libraries base expect_test_helpers_core.expect_test_helpers_base
+  topological_sort)
+ (preprocess (pps ppx_jane)))

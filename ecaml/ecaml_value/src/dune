@@ -1,0 +1,5 @@
+(library (name ecaml_value) (public_name ecaml.ecaml_value)
+ (library_flags -linkall)
+ (libraries async_unix core_kernel nested_profile core_kernel.univ)
+ (c_flags :standard -std=c99) (c_names ecaml_stubs)
+ (preprocess (pps ppx_jane)))

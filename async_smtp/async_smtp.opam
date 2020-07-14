@@ -1,0 +1,34 @@
+opam-version: "2.0"
+maintainer: "opensource@janestreet.com"
+authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
+homepage: "https://github.com/janestreet/async_smtp"
+bug-reports: "https://github.com/janestreet/async_smtp/issues"
+dev-repo: "git+https://github.com/janestreet/async_smtp.git"
+doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/async_smtp/index.html"
+license: "MIT"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "async"
+  "async_extra"
+  "async_inotify"
+  "async_sendfile"
+  "async_shell"
+  "async_ssl"
+  "core"
+  "email_message"
+  "ppx_jane"
+  "re2"
+  "re2_stable"
+  "resource_cache"
+  "sexp_macro"
+  "textutils"
+  "base64"
+  "cryptokit"
+  "dune"           {>= "2.0.0"}
+]
+synopsis: "SMTP client and server"
+description: "
+"
