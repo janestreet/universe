@@ -1,10 +1,10 @@
 (lang dune 2.0)
-(name juniverse)
+(name janestreet-universe)
 
 (generate_opam_files true)
 
 (package
- (name juniverse)
+ (name janestreet-universe)
  (depends
    (ocaml (>= 4.09.0))
     js_of_ocaml-ppx
