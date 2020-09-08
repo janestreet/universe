@@ -1,3 +1,4 @@
 (executables (names gen)
+ (modes byte)
  (libraries str compiler-libs.common compiler-libs.toplevel)
  (preprocess no_preprocessing))
