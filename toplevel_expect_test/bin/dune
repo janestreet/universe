@@ -1,4 +1,5 @@
 (executables (names main) (link_flags -linkall)
+ (modes byte)
  (libraries toplevel_expect_test) (preprocess (pps ppx_jane)))
 
 (install (section bin) (files (main.bc as ocaml-expect)))
