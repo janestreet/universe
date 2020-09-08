@@ -3,7 +3,7 @@
   web_testing)
  (preprocess (pps ppx_jane)))
 
-(rule (targets embedded_files.ml embedded_files.mli)
- (deps %{workspace_root}/app/embed-file/bin/embed_file.exe
-  ../client/main.bc.js)
- (action (bash "%{deps} -output embedded_files")))
+; (rule (targets embedded_files.ml embedded_files.mli)
+;  (deps %{workspace_root}/app/embed-file/bin/embed_file.exe
+;   ../client/main.bc.js)
+;  (action (bash "%{deps} -output embedded_files")))
