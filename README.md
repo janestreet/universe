@@ -11,13 +11,15 @@ git clone https://github.com/janestreet/universe
 cd universe
 duniverse init
 duniverse opam-install # install dependencies that can't be built by Dune
-opam install notty     # FIXME
 duniverse pull
 ```
 
 You can now build the universe by `dune build`.
 
 ## Manual tweaks
+
+That had to be made to make the universe buildable. Our aim is to make this list
+empty.
 
 * https://github.com/janestreet/universe/commit/cde07734ce4cac655f3d0bf3c709b2fb0d95c95a
 * https://github.com/janestreet/universe/commit/649750a1073a701e40b2f705bdc69a1a7d53722b
