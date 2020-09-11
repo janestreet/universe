@@ -15,6 +15,9 @@ duniverse opam-install
 duniverse pull
 # Fix conflicts with installed libraries
 rm -rf duniverse/zarith* duniverse/uuseg* duniverse/uucp* duniverse/uutf* duniverse/seq*
+# Work around the ctypes issue
+opam install ctypes-foreign
+rm -rf duniverse/ctypes* duniverse/integers*
 ```
 
 You can now build the universe by `dune build`.
@@ -69,3 +72,16 @@ empty.
 * https://github.com/janestreet/universe/commit/6e9129c10e5391c848efd57d02ea5c0a737e5ce7
 * https://github.com/janestreet/universe/commit/6b76f092fb1d727833d68e23c88c700080612906
 * https://github.com/janestreet/universe/commit/661fe5360f6d07297f147133410ce16b3a781b9b
+* https://github.com/janestreet/universe/commit/ac30327ee8fe409ae31738a8aeb9f8c1a31f341b
+* https://github.com/janestreet/universe/commit/8e42f69407766866a968edd8a60c742f34d04d70
+* https://github.com/janestreet/universe/commit/b36c0210279dc79da94c172bab90763e2a05d8f2
+* https://github.com/janestreet/universe/commit/ab86c926bcc7bfef97bdebc1a980945e1510b18c
+* https://github.com/janestreet/universe/commit/1b1ebb7b3fe3e105006c540035f8f607059f850b
+* https://github.com/janestreet/universe/commit/70301b1fd1ffdd4744328c945089d26e43704023
+* https://github.com/janestreet/universe/commit/24776388049aa93f0a4a3c726a67c78076fb82bd
+* https://github.com/janestreet/universe/commit/26235793c686c9ff950d5e4700dc264e96d60e30
+* https://github.com/janestreet/universe/commit/0debc845369c547cfb66d6803f93e35e17ee89b1
+* https://github.com/janestreet/universe/commit/ab59ded2197206adaa705edcf49cad029754b74f
+* https://github.com/janestreet/universe/commit/cfbb13d96b1e8184475a5fad963ef4ded073ccc3
+* https://github.com/janestreet/universe/commit/32e12986b2ecc4e80b767ebe180c464805007f69
+* https://github.com/janestreet/universe/commit/a75b75140b03f3793bb134476679819cc5f95d45
