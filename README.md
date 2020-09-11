@@ -10,8 +10,11 @@ Use this `duniverse` fork: https://github.com/snowleopard/duniverse.
 git clone https://github.com/janestreet/universe
 cd universe
 duniverse init
-duniverse opam-install # install dependencies that can't be built by Dune
+# Install dependencies that can't be built by Dune
+duniverse opam-install
 duniverse pull
+# Fix conflicts with installed libraries
+rm -rf duniverse/zarith* duniverse/uuseg* duniverse/uucp* duniverse/uutf* duniverse/seq*
 ```
 
 You can now build the universe by `dune build`.
@@ -33,3 +36,13 @@ empty.
 * https://github.com/janestreet/universe/commit/88b918b1ab7ffce07ba87480aaf65db86b9af926
 * https://github.com/janestreet/universe/commit/b6955d0496030d2a5eb80665321586004762cc6c
 * https://github.com/janestreet/universe/commit/df0f24934a22be30992f33c3042519a69387c6c2
+* https://github.com/janestreet/universe/commit/bf7630d8ac7f7bf9fd92aba4abe040b4328aef84
+* https://github.com/janestreet/universe/commit/ea5f700c68c96ff97fb22fbb6460e4cdc4da7f88
+* https://github.com/janestreet/universe/commit/7b2f68021e1b0839607c1fb15ee9ed48fdb71078
+* https://github.com/janestreet/universe/commit/d6f42ce3b4648527d2c13f5ec47fdf9eac7f0397
+* https://github.com/janestreet/universe/commit/2879e5ef23c02aaf9bfde21a779a3738a84c55d0
+* https://github.com/janestreet/universe/commit/9b4253e1cb9aba4886be3dd4c82f38b7a1b05a8a
+* https://github.com/janestreet/universe/commit/311099da18bf8484ed5f24c5be8990f3604ca8b3
+* https://github.com/janestreet/universe/commit/4147d659de1045d0b3553ea108db92e7d4f20e70
+* https://github.com/janestreet/universe/commit/ecd8e0efc23aa9b504540349a802b59564e87205
+* https://github.com/janestreet/universe/commit/93898cbd7365f5f588d1dc03dba79d4dc9a9dffa
