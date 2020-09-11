@@ -1,4 +1,5 @@
 (library (name replace_caml_modify_for_testing)
+ (modes native)
  (library_flags -cclib -Xlinker -cclib --wrap -cclib -Xlinker -cclib
   caml_modify)
  (c_names replace_caml_modify_for_testing_stub)
