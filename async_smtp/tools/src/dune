@@ -1,4 +1,5 @@
 (library (name async_smtp_tools) (public_name async_smtp.tools)
+ (flags :standard -w -49)
  (libraries async async_shell async_smtp core cryptokit email_message re2
   core.uuid)
  (preprocess (pps ppx_jane)))
