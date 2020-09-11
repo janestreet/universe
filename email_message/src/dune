@@ -1,4 +1,5 @@
 (library (name email_message) (public_name email_message)
+ (flags :standard -w -49)
  (libraries async base64 base64.rfc2045 core.bigstring_unix core cryptokit
   email_address magic-mime re2 core.uuid)
  (preprocess (pps ppx_jane)))
