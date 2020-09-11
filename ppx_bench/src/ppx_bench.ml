@@ -128,7 +128,7 @@ let expand_bench_module ~loc ~path name_suffix name m =
   apply_to_descr_bench
     path "add_bench_module" loc ~inner_loc:m.pmod_loc None ?name_suffix name
     (pexp_fun ~loc Nolabel None (punit ~loc)
-       (pexp_letmodule ~loc (Located.mk ~loc "M")
+       (pexp_letmodule ~loc (Located.mk ~loc (Some "M"))
           m
           (eunit ~loc)))
 

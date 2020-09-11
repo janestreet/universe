@@ -33,7 +33,7 @@ module Inline = struct
           ~loc
           (module_binding
              ~loc
-             ~name:(Located.mk ~loc (Name.to_constructor_string constructor_name))
+             ~name:(Located.mk ~loc (Some (Name.to_constructor_string constructor_name)))
              ~expr:(pmod_structure ~loc strs))
       ]
   ;;

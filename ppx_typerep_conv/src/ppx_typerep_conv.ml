@@ -312,7 +312,7 @@ module Typerep_implementation = struct
       in
       let type_name_module = pmod_apply ~loc make type_name_struct in
       let module_def =
-        pstr_module ~loc @@ module_binding ~loc ~name:(Located.mk ~loc name)
+        pstr_module ~loc @@ module_binding ~loc ~name:(Located.mk ~loc (Some name))
                               ~expr:type_name_module
       in
       let typename_of_t =

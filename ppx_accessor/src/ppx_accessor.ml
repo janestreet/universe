@@ -7,7 +7,7 @@ let maybe_wrap_in_submodule structure_items ~loc ~submodule =
   | Some submodule ->
     [ module_binding
         ~loc
-        ~name:(Located.mk ~loc submodule)
+        ~name:(Located.mk ~loc (Some submodule))
         ~expr:(pmod_structure structure_items ~loc)
       |> pstr_module ~loc
     ]

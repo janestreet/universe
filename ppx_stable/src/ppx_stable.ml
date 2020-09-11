@@ -233,14 +233,14 @@ let generate_stable_variant_module ~td ~loc ~cdl =
     in
     mk_module
       ~loc
-      ~name:"Helper"
+      ~name:(Some "Helper")
       ~items:
         [ pstr_value ~loc Nonrecursive [ value_binding ~loc ~pat:(pvar ~loc "map") ~expr ]
         ]
   in
   [ mk_module
       ~loc
-      ~name:(stable_variant_name ~type_name:td.ptype_name.txt)
+      ~name:(Some (stable_variant_name ~type_name:td.ptype_name.txt))
       ~items:(constructors @ [ map_function ])
   ]
 ;;
