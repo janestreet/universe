@@ -1,4 +1,5 @@
 (library (name ppx_hash_test) (libraries core_kernel)
+ (flags :standard -w -56)
  (preprocess (pps ppx_jane -allow-unannotated-ignores)))
 
 (alias (name DEFAULT)
