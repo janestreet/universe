@@ -10,17 +10,27 @@ Use this `duniverse` fork: https://github.com/snowleopard/duniverse.
 git clone https://github.com/janestreet/universe
 cd universe
 duniverse init
-# Install dependencies that can't be built by Dune
-duniverse opam-install
 duniverse pull
-# Fix conflicts with installed libraries
-rm -rf duniverse/zarith* duniverse/uuseg* duniverse/uucp* duniverse/uutf* duniverse/seq*
-# Work around the ctypes issue
-opam install ctypes-foreign
+# Manually pull in a version of cryptokit that can be built with Dune
+(cd duniverse; git clone -b dune-universe-v1.14 git@github.com:snowleopard/cryptokit.git)
+# Install notty manually, which also pulls in ocb-stubblr, uucp and uuseg
+opam install notty
+rm -rf duniverse/uuseg* duniverse/uucp* duniverse/uutf*
+# Install inotify manually
+opam install inotify
+# Install pyml manually, which also pulls in stdcompat that conflicts with seq
+opam install pyml
+rm -rf duniverse/seq*
+# Work around ctypes issue (this also pulls in integers)
+opam install ctypes ctypes-foreign
 rm -rf duniverse/ctypes* duniverse/integers*
+# Manually install graphics whose existence is checked by js_of_ocaml-compiler
+opam install graphics
 ```
 
 You can now build the universe by `dune build`.
+
+We hope to eventually get rid of all manual steps in the above setup.
 
 ## Manual tweaks
 
@@ -85,3 +95,4 @@ empty.
 * https://github.com/janestreet/universe/commit/cfbb13d96b1e8184475a5fad963ef4ded073ccc3
 * https://github.com/janestreet/universe/commit/32e12986b2ecc4e80b767ebe180c464805007f69
 * https://github.com/janestreet/universe/commit/a75b75140b03f3793bb134476679819cc5f95d45
+* https://github.com/janestreet/universe/commit/f9de744e6117f247a338f26241b11b9cd989ba7c
