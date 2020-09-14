@@ -6,7 +6,7 @@ All of our open-source packages as one monorepo.
 
 Use this `duniverse` fork: https://github.com/snowleopard/duniverse.
 
-```
+```bash
 git clone https://github.com/janestreet/universe
 cd universe
 duniverse init
