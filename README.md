@@ -96,3 +96,4 @@ empty.
 * https://github.com/janestreet/universe/commit/32e12986b2ecc4e80b767ebe180c464805007f69
 * https://github.com/janestreet/universe/commit/a75b75140b03f3793bb134476679819cc5f95d45
 * https://github.com/janestreet/universe/commit/f9de744e6117f247a338f26241b11b9cd989ba7c
+* https://github.com/janestreet/universe/commit/49d066f3c2b7385eb291444609ff99cc310b2a17
