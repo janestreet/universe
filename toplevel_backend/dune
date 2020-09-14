@@ -1,3 +1,4 @@
 (library (name toplevel_backend) (public_name toplevel_backend)
+ (flags :standard -w -58)
  (libraries ppx_here.expander core_kernel compiler-libs.common findlib.top)
  (preprocess (pps ppx_jane)))
